@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Check Operating System
-ubuntu20_04=$(lsb_release -d 2>&1 | grep "Ubuntu 20.04")
+ubuntu20_04=$(lsb_release -d 2>&1 | grep "DragonOS Focal")
 ubuntu22_04=$(lsb_release -d 2>&1 | grep "Ubuntu 22.04")
-if [[ -n "$ubuntu20_04" ]]
+if [[ -n "$DragonOS Focal" ]]
 then
     # Ubuntu 20.04
-    echo "Ubuntu 20.04 detected"
+    echo "DragonOS Focal detected"
 fi
 if [[ -n "$ubuntu22_04" ]]
 then
