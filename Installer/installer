@@ -191,6 +191,7 @@ cmake ..
 make
 sudo make install
 sudo ldconfig
+sudo cp -r /usr/local/lib/python3.8/site-packages/gr_bluetooth/ /usr/local/lib/python3.8/dist-packages/
 ########## Verify ##########
 ls /usr/local/bin/btrx
 """,True,'Out-of-Tree Modules'))
