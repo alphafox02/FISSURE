@@ -14,13 +14,18 @@ then
     echo "Ubuntu 22.04 detected"
 fi
 
-if [[ -z "$ubuntu20_04" ]] && [[ -z "$ubuntu22_04" ]]
-then
-    # Ubuntu 16.04, 18.04
-    echo "This branch is for Ubuntu 20.04 and 22.04 only. Switch to a different FISSURE branch before installing!"
-    exit
-fi
+while true; do
 
+	read -p "Are you sure this is DragonOS Focal? (yes/no) " yn
+
+	case $yn in 
+		yes ) echo ok, we will proceed;
+		break;;
+		no ) echo exiting...;
+		exit;;
+		* ) echo invalid response;;
+	esac
+done
 # Check for Qt5
 qt5_version=$(qmake --version | grep "version 5")
 if [[ -z "$qt5_version" ]]
