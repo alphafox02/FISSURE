@@ -4,13 +4,19 @@
 ubuntu22_04=$(lsb_release -d 2>&1 | grep "Ubuntu 22.04")
 ubuntu18_04=$(lsb_release -d 2>&1 | grep "Ubuntu 18.04")
 ubuntu20_04=$(lsb_release -d 2>&1 | grep "Ubuntu 20.04")
-dragonOS_focal=$(lsb_release -d 2>&1 | grep "DragonOS Focal")
+dragonos_focalx=$(lsb_release -d 2>&1 | grep "DragonOS FocalX")
 kde_neon=$(lsb_release -d 2>&1 | grep "KDE neon")
 
 if [[ -n "$ubuntu22_04" ]]
 then
     # Ubuntu 22.04
     echo "Ubuntu 22.04 detected"
+fi
+
+if [[ -n "$dragonos_focalx" ]]
+then
+    # DragonOS FocalX
+    echo "DragonOS FocalX detected"
 fi
 
 # Python3_maint-3.7, Ubuntu 18.04
